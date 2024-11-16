@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login"
+    android:weightSum="1">
+
+    <!-- Rectángulo detrás del logo -->
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="208dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/rectangle_background" />
+
+    <!-- Logo de la aplicación encima del rectángulo -->
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-180dp"
+        android:src="@drawable/logoapp" />
+
+    <!-- Espacio para empujar los elementos hacia abajo -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="0" />
+
+    <!-- Email Label and Input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/et_format_txt"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/et_format"
+            android:hint="Escribe tu email....."
+            android:padding="10dp"
+            android:paddingLeft="13dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Password Label and Input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:background="@drawable/et_format_txt"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="8dp"
+
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/etpassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Escribe tu contraseña"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:background="@drawable/et_format"
+            android:paddingLeft="13dp" />
+    </LinearLayout>
+    <!-- Espacio para empujar los elementos hacia abajo -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="0.2" />
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="20dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:layout_gravity="center" />
+
+    <!-- Forgot Password Text -->
+    <TextView
+        android:id="@+id/tvforgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password?"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center" />
+
+    <!-- Rectángulo en la parte inferior de la pantalla -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+         />
+
+
+    <!-- Rectángulo en la parte inferior de la pantalla -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rectangle_bottom_background" />
+</LinearLayout>
+

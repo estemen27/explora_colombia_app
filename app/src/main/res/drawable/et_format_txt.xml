@@ -1,0 +1,20 @@
+<!-- res/drawable/et_format.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo del EditText -->
+    <solid android:color="@color/yellow" />
+
+    <!-- Bordes y esquinas redondeadas -->
+    <corners android:radius="12dp" />
+
+    <!-- Borde gris claro -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/light_gray" />
+
+    <!-- Padding interno -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+</shape>

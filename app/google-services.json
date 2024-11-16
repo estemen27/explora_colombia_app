@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1064466502995",
+    "firebase_url": "https://exploracolombiaapp-c27ed-default-rtdb.firebaseio.com",
+    "project_id": "exploracolombiaapp-c27ed",
+    "storage_bucket": "exploracolombiaapp-c27ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064466502995:android:a540d71fa63980499dfda6",
+        "android_client_info": {
+          "package_name": "com.estebanbe.exploracolombiaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3LxMSrD5b2VwkoMDiX7HqY6yjUvzHUhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
