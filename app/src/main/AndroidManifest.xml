@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ExploraColombiaApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.Inicio"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".controller.MainActivity"
+            android:exported="false"/>
+        <activity android:name=".controller.SignUp"
+            android:exported="false"/>
+        <activity android:name=".controller.ForgotPassword"
+            android:exported="false"/>
+        <activity android:name=".controller.Login"
+            android:exported="false"/>
+
     </application>
 
 </manifest>
