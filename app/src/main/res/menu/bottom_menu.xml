@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btnSearch"
+        android:title="Explora"
+        android:icon="@drawable/search_24px"/>
+
+    <item
+        android:id="@+id/btnFavorite"
+        android:title="Favoritos"
+        android:icon="@drawable/favorite_24px"/>
+
+    <item
+        android:id="@+id/btnSchedule"
+        android:title="Reservas"
+        android:icon="@drawable/today_24px"/>
+
+    <item
+        android:id="@+id/btnPuntos"
+        android:title="Mis Puntos"
+        android:icon="@drawable/trophy_24px"/>
+
+    <item
+        android:id="@+id/btnProfile"
+        android:title="Perfil"
+        android:icon="@drawable/account_circle_24px"/>
+</menu>
