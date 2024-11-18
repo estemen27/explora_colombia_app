@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iconoHorario"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/clock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Icono de horario" />
+
+    <TextView
+        android:id="@+id/tituloHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HORARIO DE ATENCIÓN"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/iconoHorario"
+        app:layout_constraintTop_toTopOf="@id/iconoHorario"
+        app:layout_constraintBottom_toBottomOf="@id/iconoHorario" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tituloHorario"
+        app:layout_constraintBottom_toTopOf="@id/btnCancelar">
+
+        <LinearLayout
+            android:id="@+id/contenedorDias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/grey">
+
+            <include layout="@layout/item_dia_horario" android:id="@+id/lunes" />
+            <include layout="@layout/item_dia_horario" android:id="@+id/martes" />
+            <include layout="@layout/item_dia_horario" android:id="@+id/miercoles" />
+            <include layout="@layout/item_dia_horario" android:id="@+id/jueves" />
+            <include layout="@layout/item_dia_horario" android:id="@+id/viernes" />
+            <include layout="@layout/item_dia_horario" android:id="@+id/sabado" />
+            <include layout="@layout/item_dia_horario" android:id="@+id/domingo" />
+            <include layout="@layout/item_dia_horario" android:id="@+id/festivo" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/yellow"/>
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnGuardar"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/yellow"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

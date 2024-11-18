@@ -29,7 +29,28 @@
             android:exported="false"/>
         <activity android:name=".controller.Login"
             android:exported="false"/>
-
+        <activity android:name=".controller.Detail"
+            android:exported="false"/>
+        <activity android:name=".controller.EditContact"
+            android:exported="false"/>
+        <activity android:name=".controller.EditDescuento"
+            android:exported="false"/>
+        <activity android:name=".controller.EditGallery"
+            android:exported="false"/>
+        <activity android:name=".controller.EditHorario"
+            android:exported="false"/>
+        <activity android:name=".controller.EditMenu"
+            android:exported="false"/>
+        <activity android:name=".controller.Gallery"
+            android:exported="false"/>
+        <activity android:name=".controller.Menu"
+            android:exported="false"/>
+        <activity android:name=".controller.Offer"
+            android:exported="false"/>
+        <activity android:name=".controller.PlateEdit"
+            android:exported="false"/>
+        <activity android:name=".controller.Review"
+            android:exported="false"/>
     </application>
 
 </manifest>

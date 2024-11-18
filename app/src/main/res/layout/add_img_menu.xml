@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="520dp"
+    android:paddingTop="32dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imágen"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Vista previa de la imagen -->
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="16:9" />
+
+    <!-- Botón de cámara -->
+
+    <!-- Etiqueta para el botón de cámara -->
+
+    <ImageButton
+        android:id="@+id/photo_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/borderingwhite"
+        android:backgroundTint="@color/blue1"
+        android:padding="11dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/camera"
+        app:layout_constraintEnd_toStartOf="@id/gallery_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagePreview" />
+
+    <TextView
+        android:id="@+id/cameraLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cámara"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/photo_btn"
+        app:layout_constraintStart_toStartOf="@id/photo_btn"
+        app:layout_constraintEnd_toEndOf="@id/photo_btn" />
+
+    <!-- Botón de galería -->
+    <ImageButton
+        android:id="@+id/gallery_btn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="8dp"
+        android:padding="11dp"
+        android:backgroundTint="@color/blue1"
+        android:src="@drawable/folder"
+        android:scaleType="centerInside"
+        android:background="@drawable/borderingwhite"
+        app:layout_constraintTop_toTopOf="@id/photo_btn"
+        app:layout_constraintStart_toEndOf="@id/photo_btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Etiqueta para el botón de galería -->
+    <TextView
+        android:id="@+id/galleryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar desde galería"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/gallery_btn"
+        app:layout_constraintStart_toStartOf="@id/gallery_btn"
+        app:layout_constraintEnd_toEndOf="@id/gallery_btn" />
+
+    <!-- Botón Cancelar -->
+
+    <!-- Botón Guardar -->
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/white"
+        android:text="Cancelar"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/saveButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancelButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
