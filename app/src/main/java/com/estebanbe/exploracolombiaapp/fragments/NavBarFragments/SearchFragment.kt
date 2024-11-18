@@ -9,16 +9,13 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
-import androidx.fragment.app.FragmentManager
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.estebanbe.exploracolombiaapp.R
-import com.estebanbe.exploracolombiaapp.TabAdapter.TabAdapter
-import com.estebanbe.exploracolombiaapp.TabFragments.ForYouFragment
-import com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.LiquidGastroFragment
-import com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.RestaurantFragment
-import com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.SolidGastroFragment
-import com.estebanbe.exploracolombiaapp.TabFragments.HotelFragment
+import com.estebanbe.exploracolombiaapp.controller.TabAdapter
+import com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.LiquidGastroFragment
+import com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.RestaurantFragment
+import com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.SolidGastroFragment
 
 
 class SearchFragment : Fragment() {

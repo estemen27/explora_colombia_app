@@ -1,4 +1,4 @@
-package com.estebanbe.exploracolombiaapp.TabFragments
+package com.estebanbe.exploracolombiaapp.fragments.TabFragments
 
 import android.os.Bundle
 import android.util.Log
@@ -9,17 +9,14 @@ import android.view.ViewGroup
 import com.estebanbe.exploracolombiaapp.R
 
 
-class MapFragment : Fragment() {
+class HandMadeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.e("Error", "AQUIII EN mapa")
-        return inflater.inflate(R.layout.fragment_map, container, false)
+        Log.e("Fragmento!","HandMade")
+        return inflater.inflate(R.layout.fragment_hand_made, container, false)
     }
-    override fun onStart() {
-        super.onStart()
-        Log.e("MAPA", "onStart ejecutado")
-    }
+
 }

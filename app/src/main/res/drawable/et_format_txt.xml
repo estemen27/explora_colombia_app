@@ -9,7 +9,7 @@
     <!-- Borde gris claro -->
     <stroke
         android:width="2dp"
-        android:color="@color/light_gray" />
+        android:color="@color/gray" />
 
     <!-- Padding interno -->
     <padding

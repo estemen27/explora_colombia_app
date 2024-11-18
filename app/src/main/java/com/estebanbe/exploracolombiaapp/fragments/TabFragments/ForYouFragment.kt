@@ -1,4 +1,4 @@
-package com.estebanbe.exploracolombiaapp.TabFragments
+package com.estebanbe.exploracolombiaapp.fragments.TabFragments
 
 import android.os.Bundle
 import android.util.Log

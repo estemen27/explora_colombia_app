@@ -1,4 +1,4 @@
-package com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.Entities
+package com.estebanbe.exploracolombiaapp.modelo
 
 data class Restaurant(
     var uid: String,

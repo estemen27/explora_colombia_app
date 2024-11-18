@@ -1,4 +1,4 @@
-package com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.Adapters
+package com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.Adapters
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,9 +8,8 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.storage.FirebaseStorage
 import com.estebanbe.exploracolombiaapp.R
-import com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.Entities.Offer
+import com.estebanbe.exploracolombiaapp.modelo.Offer
 
 class OfferAdapter (private val offerList : ArrayList<Offer>) :RecyclerView.Adapter<OfferAdapter.OfferViewHolder>() {
 

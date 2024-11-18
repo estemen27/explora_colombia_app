@@ -1,4 +1,4 @@
-package com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments
+package com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -16,9 +16,9 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.estebanbe.exploracolombiaapp.R
-import com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.Adapters.RestaurantAdapter
-import com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.Entities.Offer
-import com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.Entities.Restaurant
+import com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.Adapters.RestaurantAdapter
+import com.estebanbe.exploracolombiaapp.modelo.Offer
+import com.estebanbe.exploracolombiaapp.modelo.Restaurant
 
 class RestaurantFragment : Fragment() {
 

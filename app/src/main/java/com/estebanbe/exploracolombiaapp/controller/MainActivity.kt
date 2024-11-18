@@ -1,4 +1,4 @@
-package com.estebanbe.exploracolombiaapp
+package com.estebanbe.exploracolombiaapp.controller
 
 
 import android.os.Bundle
@@ -10,6 +10,7 @@ import com.estebanbe.exploracolombiaapp.NavBarFragments.PointsFragment
 import com.estebanbe.exploracolombiaapp.NavBarFragments.ProfileFragment
 import com.estebanbe.exploracolombiaapp.NavBarFragments.ScheduleFragment
 import com.estebanbe.exploracolombiaapp.NavBarFragments.SearchFragment
+import com.estebanbe.exploracolombiaapp.R
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.Adapters
+package com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.Adapters
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -6,14 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.storage.FirebaseStorage
 import com.estebanbe.exploracolombiaapp.R
-import com.estebanbe.exploracolombiaapp.TabFragments.GastroFragments.Entities.Restaurant
+import com.estebanbe.exploracolombiaapp.modelo.Restaurant
 
 class RestaurantAdapter(private val restaurantList: ArrayList<Restaurant>) : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>() {
 
