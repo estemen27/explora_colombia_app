@@ -39,7 +39,7 @@ class Login : AppCompatActivity() {
                 Toast.makeText(this, "Por favor, ingresa un correo electrónico y una contraseña.", Toast.LENGTH_SHORT).show()
             } else {
                 authService.login(email, password, {
-                    val intent = Intent(this@Login, MainActivity::class.java)
+                    val intent = Intent(this@Login, MainActivityUsuarios::class.java)
                     finish()
                     startActivity(intent)
                 }, { errorMessage ->

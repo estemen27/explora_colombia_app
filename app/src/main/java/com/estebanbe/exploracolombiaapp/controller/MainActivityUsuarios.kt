@@ -12,7 +12,7 @@ import com.estebanbe.exploracolombiaapp.NavBarFragments.ScheduleFragment
 import com.estebanbe.exploracolombiaapp.NavBarFragments.SearchFragment
 import com.estebanbe.exploracolombiaapp.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivityUsuarios : AppCompatActivity() {
 
     private lateinit var bottomNavigationView: BottomNavigationView
 
