@@ -19,7 +19,6 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
-
         <ImageView
             android:id="@+id/logoImage"
             android:layout_width="100dp"

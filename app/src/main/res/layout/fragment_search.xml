@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NavBarFragments.SearchFragment"
+    android:background="@color/white"
+    android:id="@+id/search_frame_container">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="25dp"
+        android:background="@drawable/explore_linear_border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="25dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/search_bar_style"
+            android:paddingHorizontal="20dp">
+
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/search_24px"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:textSize="18sp"
+                android:layout_marginRight="6dp"
+                android:layout_height="wrap_content"
+                android:hint="¿Qué se te antoja en Zipaquirá"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:gravity="center_vertical"
+                />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/tune_24px"/>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_marginHorizontal="15dp"
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            app:tabTextColor="@color/black"
+            app:tabIndicatorColor="@color/black"
+            app:tabIconTint="@color/black"
+            android:layout_gravity="bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_marginTop="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:id="@+id/tab_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        />
+    <LinearLayout
+        android:id="@+id/linearRestaurants"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="260dp"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:background="@drawable/restaurant_frame_layout_border"
+        android:visibility="invisible">
+
+        <FrameLayout
+            android:id="@+id/frRestaurants"
+            android:paddingVertical="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="18dp"
+            android:background="@drawable/restaurant_frame_layout_border">
+            <ImageView
+                android:id="@+id/imgRestaurants"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:src="@drawable/dinner_dining_24px"
+                android:backgroundTint="@color/black"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAlignment="center"
+                android:text="Restaurantes"
+                android:textSize="10sp"
+                android:textColor="@color/black"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frLiquidGastronomy"
+            android:layout_gravity="center_vertical"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:paddingVertical="2dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/restaurant_frame_layout_border">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:src="@drawable/sports_bar_24px"
+                android:backgroundTint="@color/black" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAlignment="center"
+                android:text="Gastronomía Liquida"
+                android:textSize="10sp"
+                android:textColor="@color/black"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frSolidGastronomy"
+            android:layout_gravity="center_vertical"
+            android:layout_width="63dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="18dp"
+            android:paddingVertical="2dp"
+            android:background="@drawable/restaurant_frame_layout_border">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="50dp"
+                android:layout_height="33dp"
+                android:src="@drawable/brunch_dining_24px"
+                android:backgroundTint="@color/black" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAlignment="center"
+                android:text="Gastronomia Sólida"
+                android:textSize="10sp"
+                android:textColor="@color/black"/>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

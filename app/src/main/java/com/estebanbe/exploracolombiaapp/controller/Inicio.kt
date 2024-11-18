@@ -125,7 +125,7 @@ class Inicio : AppCompatActivity() {
     }
 
     private fun navigateToMain() {
-        val intent = Intent(this@Inicio, MainActivity::class.java)
+        val intent = Intent(this@Inicio, MainActivityUsuarios::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)
         finish()

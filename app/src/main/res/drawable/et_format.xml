@@ -1,7 +1,7 @@
 <!-- res/drawable/et_format.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Fondo del EditText -->
-    <solid android:color="@color/light_gray" />
+    <solid android:color="@color/gray" />
 
     <!-- Bordes y esquinas redondeadas -->
     <corners android:radius="12dp" />
@@ -9,7 +9,7 @@
     <!-- Borde gris claro -->
     <stroke
         android:width="2dp"
-        android:color="@color/light_gray" />
+        android:color="@color/gray" />
 
     <!-- Padding interno -->
     <padding
