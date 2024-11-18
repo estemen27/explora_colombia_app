@@ -19,7 +19,7 @@ class MainActivityUsuarios : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_usuarios)
 
         bottomNavigationView = findViewById(R.id.bottom_navigation)
 
