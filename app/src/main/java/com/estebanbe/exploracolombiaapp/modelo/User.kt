@@ -6,5 +6,9 @@ data class User(
     val uid: String = "",
     val type: String = "", // "turista" o "propietario"
     val idComercio: String? = null,
-    val status: String? = null // Para propietarios: "pending", "approved", "rejected"
-)
+    val status: String? = null, // Para propietarios: "pending", "approved", "rejected"
+    val saldoPuntos: Int = 0
+){
+    constructor(): this("", "", "" ,"","","", 0)
+}
+
