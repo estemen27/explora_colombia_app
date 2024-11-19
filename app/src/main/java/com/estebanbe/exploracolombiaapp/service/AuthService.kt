@@ -58,8 +58,15 @@ class AuthService(private val context: Context) {
             "name" to name,
             "email" to email,
             "uid" to uid,
-            "type" to userType
+            "type" to userType,
+            "idComercio" to "",
+            "status" to "",
+            "saldoPuntos" to 0
         )
         mDbRef.child("users").child(uid).setValue(userData)
+    }
+
+    fun currentUserUid(): String{
+        return mAuth.currentUser!!.uid
     }
 }

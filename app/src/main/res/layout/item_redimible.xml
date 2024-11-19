@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <!-- Imagen del producto -->
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/restaurante_sample" />
+
+        <!-- Nombre del comercio -->
+        <TextView
+            android:id="@+id/comercioName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nombre del Comercio"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+        <!-- Nombre del producto -->
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Nombre del Producto"
+            android:textSize="10sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Precio en puntos -->
+        <Button
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="100"
+            android:drawableEnd="@drawable/explorapuntos"
+            android:drawablePadding="8dp"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
