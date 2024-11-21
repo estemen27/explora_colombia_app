@@ -52,19 +52,10 @@ class PuntosRecompensasFragment : Fragment(R.layout.activity_puntos_recompensas)
         uid = authService.currentUserUid()
 
         btnGanarMasPuntos.setOnClickListener {
-            userManager.getPuntos(uid) { saldoPuntos ->
-                val nuevoSaldoPuntos = saldoPuntos + 500
-                userManager.setPuntos(uid, nuevoSaldoPuntos) { exito ->
-                    if (exito){
-                        actualizaPuntos()
-                    } else {
-                        mostrarMsg("Error al actualizar el saldo de puntos.")
-                    }
-                }
-            }
-
-
+            val dialog = RegistrarVisitaDialogFragment()
+            dialog.show(parentFragmentManager, "RegistrarVisitaDialogFragment")
         }
+
         cargarProductos()
         recyclerViewProductos.visibility = View.VISIBLE
         actualizaPuntos()
