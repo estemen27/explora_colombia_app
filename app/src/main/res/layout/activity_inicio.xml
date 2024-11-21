@@ -44,7 +44,7 @@
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             app:cornerRadius="8dp"
-            android:backgroundTint="#404040"/>
+            android:backgroundTint="#A6A6A6"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
@@ -57,7 +57,7 @@
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             app:cornerRadius="8dp"
-            android:backgroundTint="#808080"/>
+            android:backgroundTint="#2C2C2C"/>
 
     </LinearLayout>
 
