@@ -10,7 +10,8 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/yellow" />
+        android:background="@color/yellow"
+        app:popupTheme="@style/Theme.AppCompat.Light"/>
 
     <!-- Contenedor para logo y título -->
     <LinearLayout
@@ -40,13 +41,14 @@
     <!-- Grid de botones -->
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:columnCount="2"
-        android:rowCount="3"
+        android:layout_height="555dp"
+        android:layout_marginHorizontal="12dp"
         android:alignmentMode="alignMargins"
-        android:useDefaultMargins="true"
-        android:padding="16dp"
-        android:layout_marginHorizontal="2dp">
+        android:columnCount="2"
+        android:padding="26dp"
+        android:rowCount="3"
+
+        android:useDefaultMargins="true">
         <!---->
 
         <!-- Menú -->
@@ -54,23 +56,23 @@
             android:id="@+id/menu"
             android:layout_width="150dp"
             android:layout_height="140dp"
-            android:layout_margin="8dp"
+            android:layout_margin="12dp"
             app:cardCornerRadius="18dp">
 
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="140dp"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="10dp"
                 android:background="@drawable/borderimg"
-                android:backgroundTint="@color/grey">
+                android:backgroundTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/menu"
-                    android:contentDescription="Icono de menú" />
+                    android:contentDescription="Icono de menú"
+                    android:src="@drawable/menu" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -92,17 +94,17 @@
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="140dp"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="10dp"
                 android:background="@drawable/borderimg"
-                android:backgroundTint="@color/grey">
+                android:backgroundTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/res"
-                    android:contentDescription="Icono de reseñas" />
+                    android:contentDescription="Icono de reseñas"
+                    android:src="@drawable/res" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -124,17 +126,17 @@
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="140dp"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="10dp"
                 android:background="@drawable/borderimg"
-                android:backgroundTint="@color/grey">
+                android:backgroundTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:src="@drawable/papel"
-                    android:contentDescription="Icono de detalles" />
+                    android:contentDescription="Icono de detalles"
+                    android:src="@drawable/papel" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -157,17 +159,17 @@
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="140dp"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="10dp"
                 android:background="@drawable/borderimg"
-                android:backgroundTint="@color/grey">
+                android:backgroundTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/offer"
-                    android:contentDescription="Icono de ofertas" />
+                    android:contentDescription="Icono de ofertas"
+                    android:src="@drawable/offer" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -193,25 +195,25 @@
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="140dp"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="10dp"
                 android:background="@drawable/borderimg"
-                android:backgroundTint="@color/grey">
+                android:backgroundTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/gallery"
-                    android:contentDescription="Icono de galería" />
+                    android:contentDescription="Icono de galería"
+                    android:src="@drawable/gallery" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:gravity="center"
                     android:text="Galería de imágenes"
-                    android:textSize="16sp"
-                    android:gravity="center"/>
+                    android:textSize="16sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
