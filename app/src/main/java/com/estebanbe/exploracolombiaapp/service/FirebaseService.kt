@@ -43,4 +43,16 @@ class FirebaseService {
             }
             .addOnFailureListener { onFailure(it) }
     }
+
+    // FirebaseService.kt
+    fun getFromStorage(path: String, onSuccess: (String) -> Unit, onFailure: (Exception) -> Unit) {
+        val ref: StorageReference = storage.reference.child(path)
+        ref.downloadUrl
+            .addOnSuccessListener { uri ->
+                onSuccess(uri.toString())
+            }
+            .addOnFailureListener { exception ->
+                onFailure(exception)
+            }
+    }
 }

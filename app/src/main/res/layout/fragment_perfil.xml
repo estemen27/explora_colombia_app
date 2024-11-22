@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            app:cardCornerRadius="150dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="56dp">
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_profile_pic" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User 1"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user@gmail.com"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pasaporte Gastronómico"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_button"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:text="Actualizar datos"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/option_currency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Moneda"
+            android:padding="16dp"
+            android:background="@drawable/menu_item_background"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/option_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Idioma"
+            android:padding="16dp"
+            android:background="@drawable/menu_item_background"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/option_appearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apariencia"
+            android:padding="16dp"
+            android:background="@drawable/menu_item_background"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/option_alerts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notificaciones"
+            android:padding="16dp"
+            android:background="@drawable/menu_item_background"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/option_legal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Términos legales"
+            android:padding="16dp"
+            android:background="@drawable/menu_item_background"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/option_privacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacidad"
+            android:padding="16dp"
+            android:background="@drawable/menu_item_background"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/option_contactus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contáctanos"
+            android:padding="16dp"
+            android:background="@drawable/menu_item_background"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/option_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valóranos"
+            android:padding="16dp"
+            android:background="@drawable/menu_item_background"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+</ScrollView>
