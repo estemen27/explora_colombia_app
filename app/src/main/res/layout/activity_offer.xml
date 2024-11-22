@@ -66,7 +66,7 @@
                 android:layout_marginTop="16dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
-                android:backgroundTint="@color/dark_grey">
+                android:backgroundTint="@color/white">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -88,7 +88,7 @@
                         \nArroz, frijol, carne molida, huevo frito, arepa,
                         chorizo, plátano maduro, aguacate y chicharrón"
                         android:textSize="14sp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
                         android:layout_marginTop="16dp"
                         android:text="$36.000"
                         android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"/>
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/editOffer1"
@@ -107,7 +107,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:src="@drawable/edit"
-                        app:backgroundTint="@color/blue"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/grey"
                         android:layout_marginStart="100dp"
                         app:fabCustomSize="40dp" />
 
@@ -120,7 +121,7 @@
                 android:layout_marginTop="16dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
-                android:backgroundTint="@color/dark_grey">
+                android:backgroundTint="@color/white">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -141,7 +142,7 @@
                         android:text="Lomo saltado
                         \nCarne de res, cebolla, ají, vinagre, tomate, perejil y huevo frito"
                         android:textSize="14sp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -151,7 +152,7 @@
                         android:layout_marginTop="16dp"
                         android:text="$74.000"
                         android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"/>
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/editOffer2"
@@ -160,7 +161,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:src="@drawable/edit"
-                        app:backgroundTint="@color/blue"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/grey"
                         android:layout_marginStart="100dp"
                         app:fabCustomSize="40dp" />
                 </RelativeLayout>

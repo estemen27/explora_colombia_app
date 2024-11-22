@@ -85,8 +85,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:src="@drawable/edit"
-                        app:backgroundTint="@color/blue"
-                        app:iconTint="@color/white"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/grey"
                         android:contentDescription="Editar horarios"/>
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -234,7 +234,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:src="@drawable/edit"
-                        app:backgroundTint="@color/blue"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/grey"
                         android:contentDescription="Editar contacto"/>
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -269,7 +270,8 @@
                         android:layout_alignParentBottom="true"
                         android:layout_margin="16dp"
                         android:src="@drawable/edit"
-                        app:backgroundTint="@color/blue"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/grey"
                         android:contentDescription="Editar ubicación"/>
                 </RelativeLayout>
             </com.google.android.material.card.MaterialCardView>

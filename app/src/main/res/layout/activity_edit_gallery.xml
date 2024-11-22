@@ -42,7 +42,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            app:cardBackgroundColor="@color/dark_grey"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="8dp">
 
             <LinearLayout
@@ -55,7 +56,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nombre de la imagen"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
                     android:textStyle="bold"/>
 
                 <EditText
@@ -65,7 +67,6 @@
                     android:layout_marginTop="8dp"
                     android:hint="Ingrese aquí..."
                     android:padding="8dp"
-                    android:backgroundTint="@color/white"
                     android:background="@drawable/borderingwhite"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -74,7 +75,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            app:cardBackgroundColor="#6F6D6D"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
             app:cardCornerRadius="8dp">
 
             <LinearLayout
@@ -87,7 +89,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Descripción Imagen"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
                     android:textStyle="bold"/>
 
                 <EditText
@@ -95,10 +98,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:hint="Ingrese aquí..."
+                    android:hint="    Ingrese aquí..."
                     android:padding="8dp"
-                    android:backgroundTint="@color/white"
-                    android:background="@drawable/borderingwhite"/>
+                    android:background="@drawable/borderingwhite"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:gravity="top|start"
+                    android:minLines="4"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false"
+                    />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -107,7 +116,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            app:cardBackgroundColor="#6F6D6D"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
             app:cardCornerRadius="8dp">
 
             <LinearLayout
@@ -120,7 +130,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Insertar imagen"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
                     android:textStyle="bold"/>
 
                 <ImageView
@@ -155,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancelar"
-            android:textColor="@color/yellow"
+            android:textColor="@color/black"
             style="@style/Widget.MaterialComponents.Button.TextButton"/>
 
         <Button
@@ -164,7 +175,7 @@
             android:layout_height="wrap_content"
             android:text="Guardar"
             android:layout_marginStart="8dp"
-            android:backgroundTint="@color/yellow"/>
+            android:backgroundTint="@color/black"/>
     </LinearLayout>
 
 </RelativeLayout>

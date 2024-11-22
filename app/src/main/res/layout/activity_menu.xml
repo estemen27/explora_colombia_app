@@ -53,8 +53,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MENÚ"
-                android:textSize="24sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"/>
 
@@ -87,7 +88,8 @@
                         android:layout_marginTop="16dp"
                         android:text="Bandeja paisa"
                         android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"
+                        android:textSize="19dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -97,7 +99,8 @@
                         android:layout_marginTop="16dp"
                         android:text="$36.000"
                         android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"
+                        android:textSize="19dp"/>
 
                     <TextView
                         android:id="@+id/text_description"
@@ -108,7 +111,8 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
                         android:text="Arroz, frijol, carne molida, huevo frito, chorizo, chicharrón, plátano maduro, aguacate y arepa"/>
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -118,8 +122,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:src="@drawable/edit"
-                        app:backgroundTint="@color/blue1"
-                        app:iconTint="@color/white"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/grey"
                         android:layout_marginStart="100dp"
                         app:fabCustomSize="40dp" />
 
@@ -153,9 +157,11 @@
                         android:layout_below="@id/image_lomo"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
-                        android:text="Lomo saltado "
+                        android:text="Lomo salteado "
                         android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"
+                        android:textSize="19dp"
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -165,7 +171,8 @@
                         android:layout_marginTop="16dp"
                         android:text="$74.000"
                         android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"
+                        android:textSize="19dp"/>
 
                     <TextView
                         android:id="@+id/text_description_lomo"
@@ -176,9 +183,10 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
                         android:text="Carne de res salteada, ají, cebolla,
-                          tomate, papas fritas y arroz"/>
+                          tomate, papas fritas y arroz" />
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/edit2"
@@ -187,8 +195,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:src="@drawable/edit"
-                        app:backgroundTint="@color/blue1"
-                        app:iconTint="@color/white"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/grey"
                         android:layout_marginStart="100dp"
                         app:fabCustomSize="40dp" />
                 </RelativeLayout>
@@ -223,7 +231,9 @@
                         android:layout_marginTop="16dp"
                         android:text="Pechuga Asada "
                         android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -233,7 +243,8 @@
                         android:layout_marginTop="16dp"
                         android:text="$74.000"
                         android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/black"
+                        android:textSize="19sp"/>
 
                     <TextView
                         android:id="@+id/text_description_pechuga"
@@ -244,9 +255,9 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginBottom="16dp"
-                        android:textColor="@color/white"
-                        android:text="Carne de res salteada, ají, cebolla,
-                         tomate, papas fritas y arroz"/>
+                        android:textColor="@color/black"
+                        android:textStyle="normal"
+                        android:text="Carne de res salteada, ají, cebolla, tomate, papas fritas y arroz"/>
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/edit3"
@@ -255,7 +266,8 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:src="@drawable/edit"
-                        app:backgroundTint="@color/blue1"
+                        app:backgroundTint="@color/white"
+                        app:iconTint="@color/grey"
                         android:layout_marginStart="100dp"
                         app:fabCustomSize="40dp" />
                 </RelativeLayout>

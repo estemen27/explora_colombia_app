@@ -58,7 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:cardBackgroundColor="#9E9E9E"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -74,15 +74,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nombre del plato"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold"/>
 
                     <EditText
                         android:id="@+id/nameEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Ingrese aquí..."
+                        android:hint="  Ingrese aquí..."
                         android:textColorHint="@color/grey"
-                        android:backgroundTint="@color/white"
+
                         android:background="@drawable/borderingwhite"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -92,7 +94,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:cardBackgroundColor="#9E9E9E"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -108,16 +110,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Descripción"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="19sp"/>
 
                     <EditText
                         android:id="@+id/descriptionEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Ingrese aquí..."
+                        android:hint="      Ingrese aquí..."
                         android:textColorHint="@color/grey"
-                        android:backgroundTint="@color/white"
-                        android:background="@drawable/borderingwhite"/>
+                        android:background="@drawable/borderingwhite"
+                        android:inputType="textMultiLine"
+                        android:lines="4"
+                        android:gravity="top|start"
+                        android:minLines="4"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -126,7 +135,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:cardBackgroundColor="#9E9E9E"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -142,15 +151,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Precio con descuento"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        />
 
                     <EditText
                         android:id="@+id/priceEditText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Ingrese aquí..."
+                        android:hint="  Ingrese aquí..."
                         android:textColorHint="@color/grey"
-                        android:backgroundTint="@color/white"
                         android:background="@drawable/borderingwhite"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -160,7 +171,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:cardBackgroundColor="#9E9E9E"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -176,7 +187,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Insertar imagen"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="19sp"/>
 
                     <Button
                         android:id="@+id/uploadButton"
@@ -196,7 +209,7 @@
                 android:layout_marginEnd="8dp"
                 android:text="Cancelar"
                 android:backgroundTint="@color/white"
-                android:textColor="@color/yellow"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/saveButton"
                 app:layout_constraintTop_toBottomOf="@id/cardView4"
@@ -206,7 +219,7 @@
                 android:id="@+id/saveButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/yellow"
+                android:backgroundTint="@color/black"
                 android:text="Guardar"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
