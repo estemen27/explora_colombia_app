@@ -42,7 +42,6 @@ class PuntosRecompensasFragment : Fragment(R.layout.activity_puntos_recompensas)
 
         database = FirebaseDatabase.getInstance().reference.child("productos")
         btnGanarMasPuntos = view.findViewById(R.id.btnGanarMasPuntos)
-        println("PuntosRecompensasFragment Botón encontrado: $btnGanarMasPuntos")
 
         adapter = ProductoAdapter(emptyList()) {
             actualizaPuntos()

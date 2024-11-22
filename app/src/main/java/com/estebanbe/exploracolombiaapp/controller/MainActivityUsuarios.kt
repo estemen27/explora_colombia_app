@@ -14,6 +14,7 @@ import com.estebanbe.exploracolombiaapp.NavBarFragments.ProfileFragment
 import com.estebanbe.exploracolombiaapp.NavBarFragments.ScheduleFragment
 import com.estebanbe.exploracolombiaapp.NavBarFragments.SearchFragment
 import com.estebanbe.exploracolombiaapp.R
+import com.estebanbe.exploracolombiaapp.controller.perfil.PerfilFragment
 import com.estebanbe.exploracolombiaapp.controller.puntosyrecompensas.PuntosRecompensasFragment
 
 class MainActivityUsuarios : AppCompatActivity() {
@@ -43,7 +44,7 @@ class MainActivityUsuarios : AppCompatActivity() {
                     true
                 }
                 R.id.btnProfile ->{
-                    replaceFragment(ProfileFragment())
+                    replaceFragment(PerfilFragment())
                     true
                 }
                 R.id.btnPuntos ->{

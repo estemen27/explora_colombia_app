@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/custom_divider"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:dividerPadding="8dp">
+
+    <TextView
+        android:id="@+id/option_currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Moneda"
+        android:padding="16dp"
+        android:background="@drawable/menu_item_background"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/option_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Idioma"
+        android:padding="16dp"
+        android:background="@drawable/menu_item_background"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/option_appearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apariencia"
+        android:padding="16dp"
+        android:background="@drawable/menu_item_background"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/option_alerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notificaciones"
+        android:padding="16dp"
+        android:background="@drawable/menu_item_background"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/option_legal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Términos legales"
+        android:padding="16dp"
+        android:background="@drawable/menu_item_background"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/option_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Privacidad"
+        android:padding="16dp"
+        android:background="@drawable/menu_item_background"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/option_contactus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contáctanos"
+        android:padding="16dp"
+        android:background="@drawable/menu_item_background"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/option_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Valóranos"
+        android:padding="16dp"
+        android:background="@drawable/menu_item_background"
+        android:gravity="center"
+        android:textColor="@color/black" />
+
+</LinearLayout>

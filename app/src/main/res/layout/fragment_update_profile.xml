@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="170dp"
+            app:cardCornerRadius="150dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="56dp">
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_profile_pic" />
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User 1"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user@gmail.com"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pasaporte Gastronómico"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_button"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:text="Guardar datos"
+            android:textColor="@color/white" />
+
+        <include
+            layout="@layout/profile_menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>

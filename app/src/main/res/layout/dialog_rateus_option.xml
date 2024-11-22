@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Califícanos"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/close_icon"
+            android:contentDescription="Cerrar"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="Para nosotros es muy importante conocer tu opinión y tu experiencia. Queremos poder mejorar y ofrecerte el mejor servicio, así que sería de gran ayuda valorar nuestros servicios."
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="A través de los siguientes servicios podrás darnos tu opinión."
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Google Play Store"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/google_storage_button"
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:text="Ir"
+                android:backgroundTint="@color/darker_grey"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="App Store"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/app_store_button"
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:text="Ir"
+                android:backgroundTint="@color/darker_grey"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="16dp">
+
+        <ImageView
+            android:id="@+id/star_1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/star_icon"/>
+
+        <ImageView
+            android:id="@+id/star_2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/star_icon"/>
+
+        <ImageView
+            android:id="@+id/star_3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/star_icon"/>
+
+        <ImageView
+            android:id="@+id/star_4"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/star_icon"/>
+
+        <ImageView
+            android:id="@+id/star_5"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/star_icon"/>
+
+    </LinearLayout>
+
+</LinearLayout>

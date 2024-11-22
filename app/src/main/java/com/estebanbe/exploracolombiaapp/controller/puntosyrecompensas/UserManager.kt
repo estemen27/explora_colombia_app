@@ -27,9 +27,10 @@ object UserManager {
     }
 
     // Obtener un usuario
-    fun getUsuario(uid: String, onResult: (User?) -> Unit) {
+    fun getUsuario(uid: String, onResult: (User) -> Unit) {
         realtimeService.getFromRealtimeDatabase("users", uid, { data ->
             if (data != null) {
+                val puntos = data["saldoPuntos"] as Long
                 val usuario = User(
                     name = data["name"] as String,
                     email = data["email"] as String,
@@ -37,14 +38,14 @@ object UserManager {
                     type = data["type"] as String,
                     idComercio = data["idComercio"] as String?,
                     status = data["status"] as String?,
-                    saldoPuntos = data["saldoPuntos"] as Int
+                    saldoPuntos = puntos.toInt()
                 )
                 onResult(usuario)
             } else {
-                onResult(null) // Si no se encuentran datos
+                onResult(User()) // Si no se encuentran datos
             }
         }, { exception ->
-            onResult(null) // En caso de error
+            onResult(User()) // En caso de error
         })
     }
 
@@ -72,4 +73,5 @@ object UserManager {
             callback(false) // Error
         })
     }
+
 }
