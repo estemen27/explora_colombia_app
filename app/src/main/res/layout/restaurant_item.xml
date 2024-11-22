@@ -32,23 +32,30 @@
                 <TextView
                     android:layout_height="35dp"
                     android:id="@+id/tvRestaurantName"
-                    android:layout_width="268dp"
+                    android:layout_width="260dp"
                     android:layout_row="0"
                     android:layout_column="0"
                     android:text="Nombre Restaurante"
                     android:textStyle="bold"
                     android:textSize="20sp"/>
 
-                <TextView
-                    android:id="@+id/tvRestaurantDescription"
+
+
+                <ScrollView
                     android:layout_row="1"
                     android:layout_column="0"
-                    android:layout_width="268dp"
-                    android:layout_height="60dp"
-                    android:text="asdasdasdasdas sa dasasd  as sdaasd"/>
-
+                    android:layout_width="260dp"
+                    android:layout_height="60dp">
+                    <TextView
+                        android:id="@+id/tvRestaurantDescription"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="asdasdasdasdas sa dasasd  as sdaasd"/>
+                </ScrollView>
                 <LinearLayout
-                    android:layout_width="268dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_row="2"
                     android:layout_column="0"
@@ -69,32 +76,38 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/linearIsOpen"
                     android:layout_column="1"
                     android:layout_row="0"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:orientation="horizontal"
-                    android:layout_gravity="center">
+                    android:layout_gravity="center"
+                    android:background="@drawable/restaurant_item_open_style">
 
                     <ImageView
                         android:layout_width="10dp"
                         android:layout_height="10dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="11dp"
                         android:background="@drawable/restaurant_card_dot"
-                        android:layout_gravity="center_vertical"/>
+                        android:layout_gravity="center_vertical"
+                        />
 
                     <TextView
                         android:id="@+id/tvRestaurantState"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="8dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:text="Abierto "/>
+                        android:text="Abierto "
+                        android:textStyle="bold"/>
                 </LinearLayout>
 
 
                 <TextView
                     android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_row="1"
                     android:layout_column="1"
                     android:textStyle="bold"

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.SearchView
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.estebanbe.exploracolombiaapp.R
@@ -19,6 +20,8 @@ import com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.S
 
 
 class SearchFragment : Fragment() {
+
+    private lateinit var searchView: SearchView
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager
     private lateinit var linearRestaurants: LinearLayout
@@ -37,17 +40,18 @@ class SearchFragment : Fragment() {
         tabLayout = view.findViewById(R.id.tabLayout)
         viewPager = view.findViewById(R.id.viewPager)
 
-
-
         tabLayout.addTab(tabLayout.newTab().setText("Para ti").setIcon(R.drawable.person_24px))
-        tabLayout.addTab(tabLayout.newTab().setText("Gastronomía").setIcon(R.drawable.restaurant_24px))
+        tabLayout.addTab(
+            tabLayout.newTab().setText("Gastronomía").setIcon(R.drawable.restaurant_24px)
+        )
         tabLayout.addTab(tabLayout.newTab().setText("Hoteles").setIcon(R.drawable.hotel_24px))
-        tabLayout.addTab(tabLayout.newTab().setText("Artesanías").setIcon(R.drawable.folded_hands_24px))
+        tabLayout.addTab(
+            tabLayout.newTab().setText("Artesanías").setIcon(R.drawable.folded_hands_24px)
+        )
         tabLayout.addTab(tabLayout.newTab().setText("Mapa").setIcon(R.drawable.map_24px))
 
         val adapter = TabAdapter(requireContext(), childFragmentManager, tabLayout.tabCount)
         viewPager.adapter = adapter
-        Log.e("Adapter", "Adapter asignado al ViewPager")
 
         linearRestaurants = view.findViewById(R.id.linearRestaurants)
         frameRestaurants = view.findViewById(R.id.frRestaurants)
@@ -56,6 +60,20 @@ class SearchFragment : Fragment() {
         imageRestaurant = view.findViewById(R.id.imgRestaurants)
 
 
+        searchView = view.findViewById(R.id.searchView)
+
+        // Configura el listener para el SearchView
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let { sendQueryToChildFragments(it) }
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                newText?.let { sendQueryToChildFragments(it) }
+                return false
+            }
+        })
 
         frameRestaurants.setOnClickListener {
             replaceFragment(RestaurantFragment())
@@ -83,7 +101,6 @@ class SearchFragment : Fragment() {
                     linearRestaurants.visibility = View.VISIBLE
                 } else {
                     clearTabContentContainer()
-                    //hideTabContentContainer}ddds
                     linearRestaurants.visibility = View.INVISIBLE
                 }
             }
@@ -122,5 +139,19 @@ class SearchFragment : Fragment() {
             transaction.remove(fragment)
             transaction.commit()
         }
+    }
+
+    private fun sendQueryToChildFragments(query: String) {
+        // Accedemos a los fragmentos hijos y les enviamos la consulta
+        val fragmentList = childFragmentManager.fragments
+        for (fragment in fragmentList) {
+            if (fragment is Filterable) {
+                fragment.filterData(query)
+            }
+        }
+    }
+
+    interface Filterable {
+        fun filterData(query: String)
     }
 }

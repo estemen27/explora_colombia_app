@@ -9,13 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.database.FirebaseDatabase
 import com.estebanbe.exploracolombiaapp.R
-import com.estebanbe.exploracolombiaapp.modelo.Offer
 
-class OfferAdapter (private val offerList : ArrayList<Offer>) :RecyclerView.Adapter<OfferAdapter.OfferViewHolder>() {
+class OfferAdapter(private val offerList: ArrayList<com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.Entities.Offer>) :RecyclerView.Adapter<OfferAdapter.OfferViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfferViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.offer_item,parent,false)
-        return  OfferViewHolder(itemView)
+        val itemView =
+            LayoutInflater.from(parent.context).inflate(R.layout.offer_item, parent, false)
+        return OfferViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
@@ -24,12 +24,17 @@ class OfferAdapter (private val offerList : ArrayList<Offer>) :RecyclerView.Adap
 
     override fun onBindViewHolder(holder: OfferViewHolder, position: Int) {
         val currentItem = offerList[position]
-        loadImageFromFirestore(currentItem.resturantUid!!, holder.image)
+        val offerUid = currentItem.uid
+
+        if (offerUid != null) {
+            loadImageFromFirestore(offerUid, holder.image)
+        } else {
+            holder.image.setImageResource(R.drawable.brunch_dining_24px)
+        }
     }
 
-
-    class OfferViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        val image : ImageView = itemView.findViewById(R.id.offerImage)
+    class OfferViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val image: ImageView = itemView.findViewById(R.id.offerImage)
     }
 
     private fun loadImageFromFirestore(uid: String, imageView: ImageView) {
@@ -38,8 +43,10 @@ class OfferAdapter (private val offerList : ArrayList<Offer>) :RecyclerView.Adap
         databaseRef.get().addOnSuccessListener { snapshot ->
             val imageUrl = snapshot.child("imageUrl").value.toString()
             if (imageUrl.isNotEmpty()) {
+                Log.i("Funciono Oferta", "")
                 Glide.with(imageView.context).load(imageUrl).into(imageView)
             } else {
+                imageView.setImageResource(R.drawable.brunch_dining_24px)
                 Log.e("LoadImage", "La URL de la imagen está vacía.")
             }
         }.addOnFailureListener {

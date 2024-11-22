@@ -13,25 +13,27 @@ import com.bumptech.glide.Glide
 import com.google.firebase.database.FirebaseDatabase
 import com.estebanbe.exploracolombiaapp.R
 import com.estebanbe.exploracolombiaapp.fragments.TabFragments.GastroFragments.Entities.Commerce
-import com.estebanbe.exploracolombiaapp.modelo.Restaurant
 import java.text.ParseException
 import java.util.Locale
 
-class RestaurantAdapter(
-    private var restaurantList: ArrayList<Commerce>,
-    private val listener : RecyclerViewEvent,
-) : RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>(){
+class LiquidGastroAdapter(
+    private var liquidGastroList: ArrayList<Commerce>,
+    private val listener : RecyclerViewEvent) : RecyclerView.Adapter<LiquidGastroAdapter.LiquidGastroViewHolder>(){
+
+
+    private var filteredList = liquidGastroList.toMutableList()
+    private val activeFilters = mutableListOf<String>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RestaurantViewHolder {
+    ): LiquidGastroViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.restaurant_item, parent, false)
-        return RestaurantViewHolder(itemView)
+        return LiquidGastroViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
-        val currentItem = restaurantList[position]
+    override fun onBindViewHolder(holder: LiquidGastroViewHolder, position: Int) {
+        val currentItem = liquidGastroList[position]
 
         holder.name.text = currentItem.name
         holder.description.text = currentItem.description
@@ -84,13 +86,11 @@ class RestaurantAdapter(
 
     }
 
-
-
     override fun getItemCount(): Int {
-        return restaurantList.size
+        return liquidGastroList.size
     }
 
-    inner class RestaurantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+    inner class LiquidGastroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         val image: ImageView = itemView.findViewById(R.id.imgRestaurant)
         val name: TextView = itemView.findViewById(R.id.tvRestaurantName)
         val description: TextView = itemView.findViewById(R.id.tvRestaurantDescription)
@@ -100,12 +100,13 @@ class RestaurantAdapter(
         val linearIsOpen : LinearLayout = itemView.findViewById(R.id.linearIsOpen)
         val restaurantState : TextView = itemView.findViewById(R.id.tvRestaurantState)
 
+
         init{
             image.setOnClickListener(this)
             favorite.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {
-                    val selectedRestaurant = restaurantList[position]
+                    val selectedRestaurant = liquidGastroList[position]
                     val uid = selectedRestaurant.uid
                     uid?.let { listener.onHeartClick(it) }
                 }
@@ -122,7 +123,7 @@ class RestaurantAdapter(
         override fun onClick(p0: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
-                val selectedRestaurant = restaurantList[position]
+                val selectedRestaurant = liquidGastroList[position]
                 val uid = selectedRestaurant.uid
                 uid?.let { listener.onItemClick(it) }
             }
@@ -144,8 +145,9 @@ class RestaurantAdapter(
         }
     }
 
+    //SearchView
     fun updateData(newList: ArrayList<Commerce>) {
-        restaurantList = newList
+        liquidGastroList = newList
         notifyDataSetChanged()
     }
 
@@ -153,4 +155,23 @@ class RestaurantAdapter(
         fun onItemClick(uid: String)
         fun onHeartClick(uid: String)
     }
+    /*
+     fun addFilter(newFilter: String) {
+        activeFilters.add(newFilter)
+        applyFilters()
+    }
+
+    fun removeFilter(filterToRemove: String) {
+        activeFilters.remove(filterToRemove)
+        applyFilters()
+    }
+
+    private fun applyFilters() {
+        filteredList = restaurantList.filter { commerce ->
+            activeFilters.all { filter -> commerce.matchesFilter(filter) }
+        }.toMutableList()
+        notifyDataSetChanged()
+    }
+
+    */
 }

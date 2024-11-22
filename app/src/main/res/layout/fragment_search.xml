@@ -17,45 +17,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingTop="25dp"
         android:background="@drawable/explore_linear_border">
-
-        <LinearLayout
+        <SearchView
+            android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginHorizontal="25dp"
-            android:orientation="horizontal"
             android:layout_marginBottom="20dp"
             android:background="@drawable/search_bar_style"
-            android:paddingHorizontal="20dp">
-
-            <ImageView
-                android:layout_marginRight="10dp"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/search_24px"/>
-
-            <EditText
-                android:layout_width="250dp"
-                android:textSize="18sp"
-                android:layout_marginRight="6dp"
-                android:layout_height="wrap_content"
-                android:hint="¿Qué se te antoja en Zipaquirá"
-                android:layout_gravity="center_vertical"
-                android:background="@null"
-                android:gravity="center_vertical"
-                />
-
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/tune_24px"/>
+            android:paddingStart="10dp"
+            android:queryHint="¿Qué se te antoja en Zipaquirá?"
+            android:iconifiedByDefault="false"
+            android:layout_gravity="center_vertical">
+        </SearchView>
 
 
-        </LinearLayout>
-
-        <com.google.android.material.tabs.TabLayout
+    <com.google.android.material.tabs.TabLayout
             android:layout_marginHorizontal="15dp"
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
