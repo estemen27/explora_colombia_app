@@ -6,7 +6,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class AuthService(private val context: Context) {
+class AuthService(private val context: Context ?= null) {
     private val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private val mDbRef: DatabaseReference = FirebaseDatabase.getInstance().reference
 
