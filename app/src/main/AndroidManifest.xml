@@ -25,6 +25,8 @@
         </activity>
         <activity android:name=".controller.MainActivityUsuarios"
             android:exported="false"/>
+        <activity android:name=".controller.MainActivity"
+            android:exported="false"/>
         <activity android:name=".controller.SignUp"
             android:exported="false"/>
         <activity android:name=".controller.ForgotPassword"

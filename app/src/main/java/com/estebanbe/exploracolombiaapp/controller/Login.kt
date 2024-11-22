@@ -11,6 +11,7 @@ import com.estebanbe.exploracolombiaapp.R
 import com.estebanbe.exploracolombiaapp.service.AuthService
 
 class Login : AppCompatActivity() {
+
     private lateinit var editEmail: EditText
     private lateinit var editPassword: EditText
     private lateinit var btnLogin: Button
@@ -35,13 +36,26 @@ class Login : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val email = editEmail.text.toString()
             val password = editPassword.text.toString()
+
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Por favor, ingresa un correo electrónico y una contraseña.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Por favor, ingresa un correo y contraseña.", Toast.LENGTH_SHORT).show()
             } else {
-                authService.login(email, password, {
-                    val intent = Intent(this@Login, MainActivityUsuarios::class.java)
-                    finish()
-                    startActivity(intent)
+                authService.login(email, password, { userType ->
+                    when (userType) {
+                        "turista" -> {
+                            val intent = Intent(this@Login, MainActivityUsuarios::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                        "propietario" -> {
+                            val intent = Intent(this@Login, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                        else -> {
+                            Toast.makeText(this, "Tipo de usuario desconocido.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
                 }, { errorMessage ->
                     Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
                 })
