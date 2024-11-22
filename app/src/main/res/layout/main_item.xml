@@ -1,27 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#f2cb05"
-    android:orientation="vertical">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Zipa Artesanías"
-        android:textSize="40sp"
-        android:background="#f2b705"
-        android:textAlignment="center"
-        android:layout_marginBottom="32dp"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/main_img_1"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@drawable/image_canvas"
-        android:layout_gravity="center"
+        android:scaleType="fitXY"
         android:src="@drawable/img_prueba"
-        android:contentDescription="Main Image"
-        android:scaleType="fitXY" />
+        android:contentDescription="Main Image" />
 
     <Button
         android:id="@+id/btn_1"
@@ -29,6 +20,6 @@
         android:layout_height="wrap_content"
         android:text="Ubicación exacta"
         android:backgroundTint="#f2cb05"
-        android:layout_gravity="center"
         android:textColor="@color/black" />
+
 </LinearLayout>
